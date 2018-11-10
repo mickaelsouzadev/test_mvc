@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class UserModel
+class UserModel extends Model
 {
 	
 	function __construct()

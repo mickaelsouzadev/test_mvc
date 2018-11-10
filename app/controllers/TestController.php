@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class HomeController extends Controller 
+class TestController extends Controller 
 {
 
 	public function __construct()
@@ -10,9 +10,9 @@ class HomeController extends Controller
 		parent::__construct('UserModel', null);
 	}
 
-	public static function index()
-	{
-		(new self)->render('index');
-	}
 
+	public static function login()
+	{
+		echo "<h1>Login</h1>";
+	}
 }

@@ -6,7 +6,9 @@
             "email": "mickael.souza.if@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phroute/phroute": "^2.1"
+    },
     "autoload": {
         "psr-4": {
           "App\\": "app/"

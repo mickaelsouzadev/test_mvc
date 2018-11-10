@@ -1,4 +1,8 @@
 <?php  
+/* PHP Class for managing views and models
+ * AUTHOR: Mickael Souza
+ * LAST EDIT: 2018-11-05
+ */
 
 namespace App\Controllers;
 
@@ -13,6 +17,7 @@ class Controller
 		
 		$this->model = new $model_class_name();
 		$this->template_dir = $template_dir;
+		
 	}
 
 	public function render($view)
