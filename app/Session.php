@@ -1,13 +1,13 @@
 <?php  
 /* PHP Class for create and managing sessions
  * AUTHOR: Mickael Souza
- * LAST EDIT: 2018-11-06
+ * LAST EDIT: 2018-11-12
  */
 namespace App;
 
 class Session 
 {
-    public function __construct()
+    public static function start()
     {
         if(session_status() == PHP_SESSION_NONE) {
             session_start();
@@ -34,7 +34,6 @@ class Session
     public static function getSessions(Array $sessions)
     {   
         $list_of_sessions = [];
-
         foreach ($sessions as $name) {
             $list_of_sessions[$name] = self::getSession($name);
         }
@@ -45,11 +44,9 @@ class Session
     public static function getAllSessions()
     {   
         $list_of_sessions = [];
-
         foreach ($_SESSION as $name => $value) {
             $list_of_sessions[$name] = self::getSession($name);
         }
-
         return $list_of_sessions;
     }
 
@@ -72,4 +69,5 @@ class Session
     {
         session_destroy();
     }
+
 }
