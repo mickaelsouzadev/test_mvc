@@ -34,11 +34,9 @@ class Cookie
 	public static function getCookies(Array $cookies)
 	{
 		$list_of_cookies = [];
-
 		foreach ($cookies as $name) {
 			$list_of_cookies[$name] = self::getCookie($name);
 		}
-
 		return $list_of_cookies;
 	}
 
@@ -65,4 +63,5 @@ class Cookie
 			self::destroyCookie($name);
 		}
 	}
+
 }
