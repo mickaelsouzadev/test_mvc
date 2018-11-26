@@ -1,7 +1,7 @@
 <?php  
 /* PHP Class for send Emails
  * AUTHOR: Mickael Souza
- * LAST EDIT: 2018-11-06
+ * LAST EDIT: 2018-11-26
  */
 namespace App;
 
@@ -80,7 +80,7 @@ class Email
             'refreshToken' => $refreshToken,
             'userName' => $this->from])
         );
-        
+
         try {
         	$this->mailer->ClearReplyTos();
 
